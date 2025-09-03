@@ -74,15 +74,15 @@ const musicProjects = [
                                         <path d="M9.86 8.86 14.14 13.14" />
                                     </svg>
                                 </div>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">{project.title}</h3>
-                                <p class="project-category">
-                                    {project.category}
-                                </p>
-                                <p class="project-description">
-                                    {project.description}
-                                </p>
+                                <div class="project-overlay">
+                                    <h3 class="project-title">{project.title}</h3>
+                                    <p class="project-category">
+                                        {project.category}
+                                    </p>
+                                    <p class="project-description">
+                                        {project.description}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     ))
@@ -128,6 +128,7 @@ const musicProjects = [
     .project-image {
         aspect-ratio: 4/3;
         overflow: hidden;
+        position: relative;
     }
 
     .placeholder-image {
@@ -141,19 +142,36 @@ const musicProjects = [
         opacity: 0.9;
     }
 
-    .project-info {
+
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
 
-    .project-title {
+    .project-card:hover .project-overlay {
+        opacity: 1;
+    }
+
+    .project-overlay .project-title {
         font-family: "DM Mono", monospace;
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
-        color: #333;
+        color: white;
     }
 
-    .project-category {
+    .project-overlay .project-category {
         font-size: 0.85rem;
         font-weight: 500;
         color: #92b4b6;
@@ -162,9 +180,9 @@ const musicProjects = [
         text-transform: uppercase;
     }
 
-    .project-description {
+    .project-overlay .project-description {
         font-family: "Instrument Sans", sans-serif;
-        color: #666;
+        color: #ccc;
         line-height: 1.6;
         font-size: 0.95rem;
     }
@@ -179,12 +197,5 @@ const musicProjects = [
             gap: 2rem;
         }
 
-        .project-info {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-        }
     }
 </style>
