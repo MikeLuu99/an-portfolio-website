@@ -1,0 +1,190 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+
+const musicProjects = [
+    {
+        title: "Ethereal Soundscapes",
+        category: "FILM SCORE / AMBIENT",
+        description:
+            "Original compositions for independent films featuring atmospheric soundscapes and emotional orchestral arrangements.",
+        image: "/placeholder-music1.jpg",
+    },
+    {
+        title: "Urban Beats Collection",
+        category: "SOUND DESIGN / HIP-HOP",
+        description:
+            "A series of beats and sound design elements created for urban documentary projects and commercial work.",
+        image: "/placeholder-music2.jpg",
+    },
+    {
+        title: "Acoustic Sessions",
+        category: "RECORDING / MIXING",
+        description:
+            "Live acoustic recordings and mixing projects showcasing natural instrument tones and spatial audio techniques.",
+        image: "/placeholder-music3.jpg",
+    },
+    {
+        title: "Electronic Experiments",
+        category: "ELECTRONIC / SYNTHESIS",
+        description:
+            "Experimental electronic compositions exploring modular synthesis and digital audio manipulation.",
+        image: "/placeholder-music4.jpg",
+    },
+    {
+        title: "Dialogue & Foley",
+        category: "POST-PRODUCTION / AUDIO",
+        description:
+            "Professional dialogue editing and foley work for short films and commercial projects.",
+        image: "/placeholder-music5.jpg",
+    },
+    {
+        title: "Collaborative Works",
+        category: "COLLABORATION / MIXING",
+        description:
+            "Music collaborations with fellow artists, focusing on mixing and production techniques.",
+        image: "/placeholder-music6.jpg",
+    },
+];
+---
+
+<Layout title="Music - Film Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="projects-grid">
+                {
+                    musicProjects.map((project) => (
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="placeholder-image">
+                                    <svg
+                                        width="60"
+                                        height="60"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+                                        <circle cx="12" cy="12" r="2" />
+                                        <path d="M12 1v6m0 6v6" />
+                                        <path d="m15.14 8.86-4.28 4.28" />
+                                        <path d="M9.86 15.14 14.14 10.86" />
+                                        <path d="m15.14 15.14-4.28-4.28" />
+                                        <path d="M9.86 8.86 14.14 13.14" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">{project.title}</h3>
+                                <p class="project-category">
+                                    {project.category}
+                                </p>
+                                <p class="project-description">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .project-card {
+        background: white;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-image {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+    }
+
+    .placeholder-image {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        opacity: 0.9;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .project-category {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #92b4b6;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .project-description {
+        font-family: "Instrument Sans", sans-serif;
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+        }
+    }
+</style>

@@ -1,0 +1,194 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+
+const projects = [
+    {
+        title: "The Urban Symphony",
+        category: "SHORT FILM / CINEMATOGRAPHY",
+        description:
+            "A visual exploration of city life through the lens of a documentary-style narrative, capturing the rhythm and pulse of urban environments.",
+        image: "/placeholder-project1.jpg",
+    },
+    {
+        title: "Memories in Motion",
+        category: "EXPERIMENTAL / VISUAL EFFECTS",
+        description:
+            "An experimental piece combining practical effects with digital manipulation to explore the concept of memory and time.",
+        image: "/placeholder-project2.jpg",
+    },
+    {
+        title: "Midnight Drive",
+        category: "MUSIC VIDEO / COLOR GRADING",
+        description:
+            "A moody music video showcasing advanced color grading techniques and cinematic storytelling through automotive imagery.",
+        image: "/placeholder-project3.jpg",
+    },
+    {
+        title: "Behind the Scenes",
+        category: "DOCUMENTARY / EDITING",
+        description:
+            "Documentary-style behind-the-scenes content capturing the filmmaking process and the stories of fellow creators.",
+        image: "/placeholder-project4.jpg",
+    },
+    {
+        title: "Digital Dreams",
+        category: "ANIMATION / MOTION GRAPHICS",
+        description:
+            "A collection of motion graphics and animation work exploring digital aesthetics and contemporary visual language.",
+        image: "/placeholder-project5.jpg",
+    },
+    {
+        title: "Portrait Series",
+        category: "CINEMATOGRAPHY / LIGHTING",
+        description:
+            "Character-driven portrait work focusing on lighting techniques and emotional storytelling through visual composition.",
+        image: "/placeholder-project6.jpg",
+    },
+];
+---
+
+<Layout title="Visuals - Film Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="projects-grid">
+                {
+                    projects.map((project) => (
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="placeholder-image">
+                                    <svg
+                                        width="60"
+                                        height="60"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="3"
+                                            width="18"
+                                            height="18"
+                                            rx="2"
+                                            ry="2"
+                                        />
+                                        <circle cx="8.5" cy="8.5" r="1.5" />
+                                        <polyline points="21,15 16,10 5,21" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">{project.title}</h3>
+                                <p class="project-category">
+                                    {project.category}
+                                </p>
+                                <p class="project-description">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .project-card {
+        background: white;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-image {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+    }
+
+    .placeholder-image {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        opacity: 0.8;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .project-category {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #92b4b6;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .project-description {
+        font-family: "Instrument Sans", sans-serif;
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+        }
+    }
+</style>

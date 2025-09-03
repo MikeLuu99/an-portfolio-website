@@ -1,0 +1,259 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="About - Film Portfolio">
+	<Navigation />
+	<main class="main-content">
+		<div class="container">
+			<div class="about-content">
+				<div class="profile-section">
+					<div class="profile-image">
+						<img src="/profile.jpg" alt="Profile" class="profile-photo">
+					</div>
+					<div class="profile-info">
+						<h1 class="name">An Nguyen</h1>
+						<p class="title">Cinematographer & Sound Designer</p>
+						<p class="location">Film Student</p>
+					</div>
+				</div>
+
+				<div class="bio-section">
+					<h2>About Me</h2>
+					<p>I'm An Nguyen, a passionate cinematographer and sound designer with a deep love for visual storytelling and audio design. My work spans across cinematography, sound design, and post-production, always seeking to create compelling narratives that resonate with audiences.</p>
+					
+					<p>As a film student, I've developed expertise in various aspects of filmmaking, from pre-production planning to final color grading. My approach combines technical proficiency with creative vision, always aiming to serve the story first.</p>
+					
+					<p>When I'm not behind the camera or in the editing room, I enjoy exploring new technologies in filmmaking, attending film festivals, and collaborating with other creative minds in the industry.</p>
+				</div>
+
+				<div class="skills-section">
+					<h2>Skills & Expertise</h2>
+					<div class="skills-grid">
+						<div class="skill-category">
+							<h3>Visual</h3>
+							<ul>
+								<li>Cinematography</li>
+								<li>Color Grading</li>
+								<li>Video Editing</li>
+								<li>Motion Graphics</li>
+								<li>Visual Effects</li>
+							</ul>
+						</div>
+						<div class="skill-category">
+							<h3>Audio</h3>
+							<ul>
+								<li>Sound Design</li>
+								<li>Music Composition</li>
+								<li>Audio Mixing</li>
+								<li>Dialogue Editing</li>
+								<li>Foley Recording</li>
+							</ul>
+						</div>
+						<div class="skill-category">
+							<h3>Tools</h3>
+							<ul>
+								<li>DaVinci Resolve</li>
+								<li>Adobe Creative Suite</li>
+								<li>Pro Tools</li>
+								<li>Logic Pro X</li>
+								<li>Cinema 4D</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-section">
+					<h2>Let's Connect</h2>
+					<p>I'm always interested in collaborating on creative projects and connecting with fellow filmmakers and artists.</p>
+					<div class="contact-info">
+						<a href="mailto:your.email@example.com" class="contact-link">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+								<polyline points="22,6 12,13 2,6"/>
+							</svg>
+							your.email@example.com
+						</a>
+						<a href="https://www.linkedin.com/in/an-nguyen-b94873139/" class="contact-link" target="_blank" rel="noopener noreferrer">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+								<rect x="2" y="9" width="4" height="12"/>
+								<circle cx="4" cy="4" r="2"/>
+							</svg>
+							LinkedIn Profile
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+.main-content {
+	min-height: 100vh;
+	padding: 2rem 0;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.about-content {
+	background: white;
+	border-radius: 12px;
+	padding: 3rem;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-section {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 3rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #eee;
+}
+
+.profile-image {
+	flex-shrink: 0;
+}
+
+.profile-photo {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid #92B4B6;
+}
+
+.profile-info h1 {
+	font-family: 'DM Mono', monospace;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: #333;
+}
+
+.title {
+	font-size: 1.2rem;
+	color: #666;
+	margin-bottom: 0.5rem;
+}
+
+.location {
+	color: #999;
+	font-size: 1rem;
+}
+
+.bio-section,
+.skills-section,
+.contact-section {
+	margin-bottom: 3rem;
+}
+
+.bio-section h2,
+.skills-section h2,
+.contact-section h2 {
+	font-family: 'DM Mono', monospace;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	color: #333;
+}
+
+.bio-section p {
+	font-family: 'Instrument Sans', sans-serif;
+	margin-bottom: 1.5rem;
+	line-height: 1.7;
+	color: #666;
+}
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+}
+
+.skill-category h3 {
+	font-family: 'DM Mono', monospace;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.skill-category ul {
+	list-style: none;
+}
+
+.skill-category li {
+	padding: 0.5rem 0;
+	color: #666;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.skill-category li:last-child {
+	border-bottom: none;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.contact-link {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	color: #666;
+	transition: color 0.2s ease;
+	font-weight: 500;
+}
+
+.contact-link:hover {
+	color: #92B4B6;
+}
+
+.contact-section p {
+	font-family: 'Instrument Sans', sans-serif;
+	color: #666;
+	line-height: 1.7;
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 1rem;
+	}
+	
+	.about-content {
+		padding: 2rem;
+	}
+	
+	.profile-section {
+		flex-direction: column;
+		text-align: center;
+		gap: 1.5rem;
+	}
+	
+	.profile-photo {
+		width: 100px;
+		height: 100px;
+	}
+	
+	.profile-info h1 {
+		font-size: 1.7rem;
+	}
+	
+	.skills-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+}
+</style>

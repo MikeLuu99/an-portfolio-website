@@ -1,0 +1,53 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Film Student Portfolio" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: 'DM Mono', monospace;
+		background-color: #F8F8F8;
+		background-image: 
+			linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+		background-size: 20px 20px;
+		color: #333;
+		line-height: 1.6;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	button {
+		font-family: inherit;
+		cursor: pointer;
+	}
+</style>
