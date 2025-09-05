@@ -1,0 +1,226 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="Sosi, 0xio2, Ultimít - Twilight - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">Sosi, 0xio2, Ultimít - Twilight</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Project:</span>
+                        <span class="meta-value">XUÂNVỀ CREATIVE</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Director:</span>
+                        <span class="meta-value">lêDUY</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Shot, Edited, and Colored by:</span>
+                        <span class="meta-value">An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Embed -->
+            <div class="video-section">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/0Lk3PPcifyw" 
+                        title="Sosi, 0xio2, Ultimít - Twilight - An Nguyen"
+                        allowfullscreen
+                        loading="lazy"
+                        class="video-embed"
+                    ></iframe>
+                </div>
+                <p class="video-description">Watch the official music video above. Directed by lêDUY, shot, edited and colored by An Nguyen for XUÂNVỀ CREATIVE.</p>
+            </div>
+
+            <div class="project-gallery">
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/251be916-b340-4964-822f-afa10030eadf_rw_1200.jpg?h=dfc9ba3e07db5d999d0f3beca5ae0502" 
+                    alt="Sosi, 0xio2, Ultimít - Twilight - Frame 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/457f32a5-d33c-4b2c-820a-6903aa397972_rw_1200.jpg?h=2e977801733257a59fa7e9ae594c656f" 
+                    alt="Sosi, 0xio2, Ultimít - Twilight - Frame 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/3ad26b94-242f-4e23-a3e5-ed74cffe6113_rw_1200.jpg?h=697b67483d3146da1ef05814d27e9480" 
+                    alt="Sosi, 0xio2, Ultimít - Twilight - Frame 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/4bd1246c-bcda-4a47-9c01-48b81da7f52d_rw_1200.jpg?h=e035372bbc82854d3b4bf25f8a88a7d8" 
+                    alt="Sosi, 0xio2, Ultimít - Twilight - Frame 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/9705347a-97f8-40ab-912f-6dde84f0e3e0_rw_1200.jpg?h=bd70b81dc62f5a182ef67e96ae24c7ed" 
+                    alt="Sosi, 0xio2, Ultimít - Twilight - Frame 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-section {
+        margin-bottom: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-description {
+        margin-top: 1rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.95rem;
+        color: #666;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .project-title {
+            font-size: 1.75rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    }
+</style>

@@ -1,0 +1,224 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="Experimental Headphone (Short film) - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">
+                    Experimental Headphone (Short film)
+                </h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Director:</span>
+                        <span class="meta-value">An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Roles:</span>
+                        <span class="meta-value"
+                            >Directed, Edited, Shot, and Colored</span
+                        >
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Starring:</span>
+                        <span class="meta-value">Man Duong</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/2c5f0d7b-e1d2-4210-8bc2-96a106bd3bed_rw_600.jpg?h=70605b1df28363f3597331407328a688"
+                    alt="Experimental Headphone (Short film) - Frame 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/6a250ed8-a71a-4503-8482-c946721b92ee_rw_600.jpg?h=491aaab7d76822548e534093a6e4b939"
+                    alt="Experimental Headphone (Short film) - Frame 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/7d796ac5-9594-4746-aee7-51418cd6119d_rw_600.jpg?h=5bcac3ec08d2c784583aa3a6e5abcf6f"
+                    alt="Experimental Headphone (Short film) - Frame 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/65094e64-0777-45f6-abaa-013a2a8e392a_rw_600.jpg?h=d9ab44baa078f446e3b6ac2f8d575da9"
+                    alt="Experimental Headphone (Short film) - Frame 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/5b745d30-397e-4974-b555-d83cd68fa334_rw_600.jpg?h=02ee06cfe4660c892b61fd0298e1a6e3"
+                    alt="Experimental Headphone (Short film) - Frame 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/a84d68c9-a80d-4d32-8f56-aae3e38e320a_rw_600.jpg?h=f68fc3867dc1277856fd523dc94102f1"
+                    alt="Experimental Headphone (Short film) - Frame 6"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-section {
+        margin-bottom: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-description {
+        margin-top: 1rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.95rem;
+        color: #666;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .project-title {
+            font-size: 1.75rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    }
+</style>

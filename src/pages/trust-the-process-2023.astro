@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="trust the process (2023) - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">trust the process (2023)</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Creator:</span>
+                        <span class="meta-value">An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Roles:</span>
+                        <span class="meta-value"
+                            >Directed, shot, and written by An Nguyen</span
+                        >
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Embed -->
+
+            <div class="project-gallery">
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/a2ee3f5c-dba7-4bf6-b178-8912290cd4dc_rw_1920.png?h=a73074ad9c62521f11e5fd834957ccb7"
+                    alt="trust the process - Frame 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/3413ae8a-427a-40bc-a40d-e8fa95de15ea_rw_1920.png?h=9782b13d9da77e414cfb22f41929cac7"
+                    alt="trust the process - Frame 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/cf294d22-e191-45ac-8a3b-5f1a941e42c8_rw_1920.png?h=754242dc96d786b17996da45aafd789a"
+                    alt="trust the process - Frame 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/e328cb56-6c37-4678-9846-a53edc64b92a_rw_1920.png?h=0d9cc2f25b9c738ef3c2d2fc7e9c85c8"
+                    alt="trust the process - Frame 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/31d505cb-3ce0-44dd-b9e3-1836bc505776_rw_1920.png?h=00635e3e9a398c9761ded58c31a9ce20"
+                    alt="trust the process - Frame 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-section {
+        margin-bottom: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-description {
+        margin-top: 1rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.95rem;
+        color: #666;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .project-title {
+            font-size: 1.75rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    }
+</style>

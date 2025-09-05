@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="ÁO DÀI ❄️ PHOTOSHOOT - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">ÁO DÀI ❄️ PHOTOSHOOT</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Photographer:</span>
+                        <span class="meta-value">An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Model:</span>
+                        <span class="meta-value">Man Duong</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/9c3dbc3c-8736-48d9-85de-1f5849c32026_rw_3840.jpg?h=48a515c5f0f66397a600916c3b843b2b" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/0d7ac8c4-9053-4272-a35f-8a2c2874e003_rw_3840.jpg?h=86e033cbfa80cc4c3dd78d069a9a8e06" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/3bf3cfed-d81e-44cb-b84e-8d7b5208b8c6_rw_3840.jpg?h=cf0694c4db5d9e91e9410f62e8102916" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/fc95ba55-ec76-44dd-9727-723062052057_rw_3840.jpg?h=7e2a825dea08982510e7740a8ed62c4b" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/7478509e-912c-4a22-a9e3-29ede1bf3e54_rw_3840.jpg?h=f15d9f43e0392a647f6637c7e792dc7f" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/0948ceee-5145-44f6-be57-258f4389fbbc_rw_3840.jpg?h=a7b646eb5d4a93d8a2ad70d2b13f86d1" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 6"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/b2a102aa-c782-4f31-9fc7-e3efa50faf7b_rw_3840.jpg?h=928834d904af51f6c0119b70ea6eb2cb" 
+                    alt="ÁO DÀI ❄️ PHOTOSHOOT - Photo 7"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .project-title {
+            font-size: 1.75rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    }
+</style>

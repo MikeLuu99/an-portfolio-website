@@ -8,7 +8,7 @@ interface Props {
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Film Student Portfolio" />
+        <meta name="description" content="Nguyen Nang Hai An (b. 2005) is a Vietnamese film director, hip-hop artist, and Film & TV Production student at University of Southern California, School of Cinematic Arts. Currently based in Saigon (Ho Chi Minh City) and Los Angeles" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
@@ -40,6 +40,22 @@ interface Props {
         background-size: 20px 20px;
         color: #333;
         line-height: 1.6;
+        position: relative;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/cherry_blossom_bg.png');
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: blur(1px);
+        z-index: -1;
     }
 
     a {
@@ -50,5 +66,43 @@ interface Props {
     button {
         font-family: inherit;
         cursor: pointer;
+    }
+
+    .project-header {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    /* Text sections with glass backgrounds */
+    .spotify-section,
+    .youtube-videos-section,
+    .video-section,
+    .project-content,
+    .content-description,
+    .related-section,
+    .cast-section,
+    .music-videos-section,
+    .content-note,
+    .album-content {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    /* Navigation bar background */
+    .navigation {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 </style>

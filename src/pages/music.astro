@@ -4,47 +4,17 @@ import Navigation from "../components/Navigation.astro";
 
 const musicProjects = [
     {
-        title: "Ethereal Soundscapes",
-        category: "FILM SCORE / AMBIENT",
-        description:
-            "Original compositions for independent films featuring atmospheric soundscapes and emotional orchestral arrangements.",
-        image: "/placeholder-music1.jpg",
+        title: "hôm ấy anh kiểu... (2024)",
+        date: "2024",
+        image: "https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/581fb7f1-7ab5-44d9-b782-36cce9cd5e2f_car_3x4.jpg?h=5eaf5127b0d9c1af7c83db6222d7bf6d",
+        href: "/hom-ay-anh-kieu-2024"
     },
     {
-        title: "Urban Beats Collection",
-        category: "SOUND DESIGN / HIP-HOP",
-        description:
-            "A series of beats and sound design elements created for urban documentary projects and commercial work.",
-        image: "/placeholder-music2.jpg",
-    },
-    {
-        title: "Acoustic Sessions",
-        category: "RECORDING / MIXING",
-        description:
-            "Live acoustic recordings and mixing projects showcasing natural instrument tones and spatial audio techniques.",
-        image: "/placeholder-music3.jpg",
-    },
-    {
-        title: "Electronic Experiments",
-        category: "ELECTRONIC / SYNTHESIS",
-        description:
-            "Experimental electronic compositions exploring modular synthesis and digital audio manipulation.",
-        image: "/placeholder-music4.jpg",
-    },
-    {
-        title: "Dialogue & Foley",
-        category: "POST-PRODUCTION / AUDIO",
-        description:
-            "Professional dialogue editing and foley work for short films and commercial projects.",
-        image: "/placeholder-music5.jpg",
-    },
-    {
-        title: "Collaborative Works",
-        category: "COLLABORATION / MIXING",
-        description:
-            "Music collaborations with fellow artists, focusing on mixing and production techniques.",
-        image: "/placeholder-music6.jpg",
-    },
+        title: "những ngày đầu (2023)",
+        date: "2024",
+        image: "https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/01454ddb-fa00-42fb-ab2d-ad9f9a51fdd7_car_3x4.jpg?h=37e11e8f7a78dc21ecaca93b0fa72351",
+        href: "/nhung-ngay-dau-2023"
+    }
 ];
 ---
 
@@ -53,40 +23,28 @@ const musicProjects = [
     <main class="main-content">
         <div class="container">
             <div class="projects-grid">
-                {
-                    musicProjects.map((project) => (
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="placeholder-image">
-                                    <svg
-                                        width="60"
-                                        height="60"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                    >
-                                        <circle cx="12" cy="12" r="2" />
-                                        <path d="M12 1v6m0 6v6" />
-                                        <path d="m15.14 8.86-4.28 4.28" />
-                                        <path d="M9.86 15.14 14.14 10.86" />
-                                        <path d="m15.14 15.14-4.28-4.28" />
-                                        <path d="M9.86 8.86 14.14 13.14" />
-                                    </svg>
-                                </div>
-                                <div class="project-overlay">
-                                    <h3 class="project-title">{project.title}</h3>
-                                    <p class="project-category">
-                                        {project.category}
-                                    </p>
-                                    <p class="project-description">
-                                        {project.description}
-                                    </p>
+                {musicProjects.map((project) => (
+                    <a href={project.href} class="project-cover">
+                        <div class="cover-content-container">
+                            <div class="cover-image-wrap">
+                                <div class="cover-image">
+                                    <img 
+                                        class="cover__img" 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        loading="lazy"
+                                    />
+                                    <div class="project-overlay">
+                                        <div class="overlay-content">
+                                            <div class="overlay-title">{project.title}</div>
+                                            <div class="overlay-date">{project.date}</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    ))
-                }
+                    </a>
+                ))}
             </div>
         </div>
     </main>
@@ -95,7 +53,7 @@ const musicProjects = [
 <style>
     .main-content {
         min-height: 100vh;
-        padding: 2rem 0;
+        padding: 4rem 0 2rem 0;
     }
 
     .container {
@@ -106,42 +64,59 @@ const musicProjects = [
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2rem;
+        align-items: start;
     }
 
-    .project-card {
+    .project-cover {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
         background: white;
-        border-radius: 2px;
-        overflow: hidden;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-        transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        max-width: 100%;
     }
 
-    .project-card:hover {
+    .project-cover:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
     }
 
-    .project-image {
-        aspect-ratio: 4/3;
-        overflow: hidden;
+    .cover-content-container {
         position: relative;
+        width: 100%;
     }
 
-    .placeholder-image {
+    .cover-image-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .cover-image {
+        position: relative;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        opacity: 0.9;
     }
 
+    .cover__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .project-cover:hover .cover__img {
+        transform: scale(1.05);
+        filter: blur(2px);
+    }
 
     .project-overlay {
         position: absolute;
@@ -149,43 +124,41 @@ const musicProjects = [
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.7);
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
         opacity: 0;
         transition: opacity 0.3s ease;
+        backdrop-filter: blur(4px);
     }
 
-    .project-card:hover .project-overlay {
+    .project-cover:hover .project-overlay {
         opacity: 1;
     }
 
-    .project-overlay .project-title {
+    .overlay-content {
+        text-align: center;
+        color: white;
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .overlay-title {
         font-family: "DM Mono", monospace;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
-        color: white;
+        line-height: 1.3;
     }
 
-    .project-overlay .project-category {
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: #92b4b6;
-        letter-spacing: 0.05em;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
+    .overlay-date {
+        font-family: "DM Mono", monospace;
+        font-size: 0.9rem;
+        color: #92B4B6;
+        font-weight: 400;
     }
 
-    .project-overlay .project-description {
-        font-family: "Instrument Sans", sans-serif;
-        color: #ccc;
-        line-height: 1.6;
-        font-size: 0.95rem;
-    }
 
     @media (max-width: 768px) {
         .container {
@@ -193,9 +166,23 @@ const musicProjects = [
         }
 
         .projects-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
+
+        .overlay-title {
+            font-size: 1rem;
+        }
+
+        .overlay-date {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

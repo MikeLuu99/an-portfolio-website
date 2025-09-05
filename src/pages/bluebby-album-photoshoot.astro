@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="BLUEBBY ALBUM PHOTOSHOOT - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">BLUEBBY ALBUM PHOTOSHOOT</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Creators:</span>
+                        <span class="meta-value">leDUY & An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type:</span>
+                        <span class="meta-value">Photography Project</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/50a2e5fb-c348-4a41-b6eb-dc51e52efce6_rw_600.jpg?h=8b810273f99808c82ce43a26335e3901" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/34b2be51-20de-4d44-a79f-2033e1f1f88c_rw_600.jpg?h=1f85b3e4bbdc0f9b41043f6481f6f306" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/ee3fd853-12ea-45e1-98c1-4dfd170d7838_rw_600.jpg?h=bb3abfe9521db08af2e7d62c927bd42e" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/ea187c7c-f068-43a4-a820-6356c3b8197d_rw_600.jpg?h=6c2827038200bee0d39231928874012e" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/4601f408-a04d-4c5d-8dbf-100d1d5a3922_rw_1200.jpg?h=dbfb2a703c799ad8ce0aa2d716c04b2a" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/cbd51082-70ae-48c0-a6ef-8bc4e196e967_rw_1200.jpg?h=49f42c88756428805b7f067c8fa0cebd" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 6"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/9b8c58dc-9d55-4f0d-a787-d7dd27c4de93_rw_1200.jpg?h=e366cce4148eff734676d81900f6bb5b" 
+                    alt="BLUEBBY ALBUM PHOTOSHOOT - Photo 7"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .project-title {
+            font-size: 1.75rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    }
+</style>

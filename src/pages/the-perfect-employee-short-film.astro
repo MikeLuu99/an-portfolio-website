@@ -1,0 +1,329 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="The Perfect Employee (Short Film) - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">The Perfect Employee (Short Film)</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Creator:</span>
+                        <span class="meta-value">An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Roles:</span>
+                        <span class="meta-value">Written, directed, edited, and colored</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Cinematography:</span>
+                        <span class="meta-value">An Nguyen, lêDUY</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                </div>
+                
+                <div class="cast-section">
+                    <h3 class="cast-title">Cast</h3>
+                    <div class="cast-grid">
+                        <div class="cast-item">
+                            <span class="actor-name">Le Khac Hoan Vu</span>
+                            <span class="character-name">The Perfect Employee</span>
+                        </div>
+                        <div class="cast-item">
+                            <span class="actor-name">Nguyen Gia Binh</span>
+                            <span class="character-name">The Boss</span>
+                        </div>
+                        <div class="cast-item">
+                            <span class="actor-name">Nguyen Minh Quan</span>
+                            <span class="character-name">The Colleague</span>
+                        </div>
+                    </div>
+                    
+                    <div class="crew-section">
+                        <div class="crew-item">
+                            <span class="crew-role">2nd Editor:</span>
+                            <span class="crew-name">Jankis</span>
+                        </div>
+                        <div class="crew-item">
+                            <span class="crew-role">Producer:</span>
+                            <span class="crew-name">Phương Linh</span>
+                        </div>
+                        <div class="crew-item">
+                            <span class="crew-role">Additional Cast:</span>
+                            <span class="crew-name">Binh Nguyen, Thai Duong, Uyen Nhi, Phuong Linh, Thuy Linh, Tri Thien, Van The</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Embed -->
+            <div class="video-section">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/9lqJ9gJVly4" 
+                        title="The Perfect Employee (Short film) - An Nguyen"
+                        allowfullscreen
+                        loading="lazy"
+                        class="video-embed"
+                    ></iframe>
+                </div>
+                <p class="video-description">Watch the full short film above. A compelling narrative exploring themes of workplace dynamics and personal identity.</p>
+            </div>
+
+            <div class="project-gallery">
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/a03978d8-4a2e-499a-89dc-9b36abd0f94f_rw_1200.jpg?h=e4e8c8753233c8add25d7fcb33efe4e1" 
+                    alt="The Perfect Employee - Frame 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/ef1c8a14-9990-4a52-998b-fdcb1963803e_rw_1200.jpg?h=f4ceda2712000d261f912f6b1398987d" 
+                    alt="The Perfect Employee - Frame 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/937b2d28-ed7b-4dee-9452-789ac93dd945_rw_1200.jpg?h=4ff7c7223d1704ce581ec57197adc47c" 
+                    alt="The Perfect Employee - Frame 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/9dd1a84c-2038-41e9-bcf8-8c4bc65c96d8_rw_1200.jpg?h=b365280f11c6d5385fc0f1dcb5006206" 
+                    alt="The Perfect Employee - Frame 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/7e810cbd-d6fe-4b14-af81-419aa1494e34_rw_1200.jpg?h=0d6e3d345f0374cd1f4d88e73a4d7d07" 
+                    alt="The Perfect Employee - Frame 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img 
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/6aea7dd5-cf55-407f-99fa-9ce5f705cda9_rw_1200.jpg?h=b508a4912500c8fff2175940bbb6e0bf" 
+                    alt="The Perfect Employee - Frame 6"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+        margin-bottom: 2rem;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .cast-section {
+        margin-top: 2rem;
+        padding: 2rem;
+        background: rgba(146, 180, 182, 0.1);
+        border-radius: 12px;
+    }
+
+    .cast-title {
+        font-family: "DM Mono", monospace;
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .cast-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cast-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        font-family: "DM Mono", monospace;
+    }
+
+    .actor-name {
+        font-weight: 500;
+        color: #333;
+        font-size: 0.95rem;
+    }
+
+    .character-name {
+        font-size: 0.85rem;
+        color: #666;
+        font-style: italic;
+    }
+
+    .crew-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-family: "DM Mono", monospace;
+    }
+
+    .crew-item {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .crew-role {
+        font-size: 0.85rem;
+        color: #666;
+        font-weight: 500;
+    }
+
+    .crew-name {
+        font-size: 0.85rem;
+        color: #333;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-section {
+        margin-bottom: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-description {
+        margin-top: 1rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.95rem;
+        color: #666;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .cast-section {
+            padding: 1.5rem;
+        }
+
+        .cast-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+</style>

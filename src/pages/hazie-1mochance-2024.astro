@@ -1,0 +1,226 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="Hazie - 1mochance (2024) - An Nguyen's Portfolio">
+    <Navigation />
+    <main class="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">Hazie - 1mochance (2024)</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Creator:</span>
+                        <span class="meta-value">An Nguyen</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Roles:</span>
+                        <span class="meta-value"
+                            >Directed, edited and colored</span
+                        >
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year:</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Embed -->
+
+            <div class="project-gallery">
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/b47019a3-7f83-472b-8588-404a5a1df8ec_rw_600.jpg?h=95e6875a467fac12b01af0d915f8ef76"
+                    alt="Hazie - 1mochance - Frame 1"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/318d20e8-6dd9-47b5-99ab-4522597d6c5a_rw_600.jpg?h=2d92be4c64d55688cee95b4b52788652"
+                    alt="Hazie - 1mochance - Frame 2"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/b9eb3292-1546-46b8-abad-c00feb143ece_rw_600.jpg?h=fb354f19414aeca57de7c6120c06e89f"
+                    alt="Hazie - 1mochance - Frame 3"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/19ca1608-d843-4933-9fb1-73d13e1e3f8e_rw_600.jpg?h=69936a614f8a796541fc40c4f20e197f"
+                    alt="Hazie - 1mochance - Frame 4"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/d71c6b0a-d3e3-4c63-b7e8-fae91e402856_rw_1200.jpg?h=9303d8e5806f7e48f3753d1530f5a132"
+                    alt="Hazie - 1mochance - Frame 5"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/647fc760-05e1-40d8-aaee-ffca7b1ca1c1_rw_1200.jpg?h=1c78c4813fc0aca0096b5393ce57083d"
+                    alt="Hazie - 1mochance - Frame 6"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+                <img
+                    src="https://cdn.myportfolio.com/9eba5643-bfa0-410a-bf8e-e98703657db5/26e1b6d7-edc9-467b-a188-b5c1849c33c5_rw_1200.jpg?h=d15069bc63fbf90269fffc4c84087100"
+                    alt="Hazie - 1mochance - Frame 7"
+                    loading="lazy"
+                    class="gallery-image"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .project-title {
+        font-family: "DM Mono", monospace;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .meta-label {
+        font-size: 0.85rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .project-gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .gallery-image:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-section {
+        margin-bottom: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .video-description {
+        margin-top: 1rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.95rem;
+        color: #666;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+
+        .project-meta {
+            gap: 1rem;
+        }
+
+        .meta-item {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .project-gallery {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .project-title {
+            font-size: 1.75rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+    }
+</style>
